@@ -1,18 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() 
+int main()
 {
-  int a, b,sum;
-  printf("Enter the first number:");
-  scanf("%d",&a);
-  printf("Enter the second number:");
-  scanf("%d" , &b);
-  sum = add(a,b);
-  printf("the sum is:%d",sum);
+  int a,b,sum;
+  a=input();
+  b=input()
+  sum=add(a,b);
+  output(a,b,sum);
+  return 0;
+}
+
+int input()
+{
+  int x;
+  printf("enter a number\n");
+  if(scanf("%d",&x)!=1)
+  {
+    printf("error in user input system 
+    \n");
+    exit(0); 
+  }
+  return(x);
 }
 
 int add(int a,int b)
-  {
-    int sum=a+b;
-    return sum;
-  }
+{
+  int sum;
+  sum=a+b;
+  return sum;
+}
+
+void output(int a,int b,int sum)
+{
+  printf("the sum of %d and %d is %d \n",a,b,sum);
+}
+
+
+
+

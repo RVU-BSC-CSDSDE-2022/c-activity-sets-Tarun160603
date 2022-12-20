@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main()
-  {
-   printf("Tarun.s\n");
-   return 0;
-  }
+{
+  printf("my name is tarun");
+  return 0;
+}

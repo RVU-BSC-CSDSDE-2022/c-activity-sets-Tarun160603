@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-struct point {
+struct point 
+{
   float x;
   float y;
 };
