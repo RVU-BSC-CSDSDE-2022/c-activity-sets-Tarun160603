@@ -1,31 +1,48 @@
 #include <stdio.h>
-int input ();
-int compare(int a, int b, int c);
-void output(int a, int b, int c,int largest);
+#include <stdlib.h>
+int input();
+int compare(int a,int b,int c);
+void output(int a,int b,int c, int lar);
 
-int main(void)
+int main()
 {
-  int a,b,c,l;
-  a=input ();
-  b=input ();
-  c=input ();
-  l = compare(a,b,c);
-  output(a,b,c,l);
+  int a,b,c,d;
+  a=input();
+  b=input();
+  c=input();
+  d=compare(a,b,c);
+  output(a,b,c,d);
 }
 
-int input(){
+int input()
+{
   int x;
-  printf("Enter the number\n");
-  scanf("%d", &x);
-  return(x);
+  printf("enter three num \n");
+  scanf("%d",&x);
+  return (x);
 }
 
-int compare(int a, int b, int c){
-  if((a>b)&&(a>c)){return(a);}
-  else if((b>a)&&(b>c)){return(b);}
-  else{return(c);}
+int compare(int a,int b,int c)
+{
+  if (a>=b)
+  {
+  if(a>=c)
+  {
+    return(a);
+  }
+  }
+  else if(b>=a)
+  {
+    if(b>=c)
+    {
+      return(b);
+    }
+  }
+  else
+    return(c);
 }
 
-void output(int a, int b, int c, int largest){
-  printf("The largest of %d, %d and %d is %d.",a,b,c,largest);
+void output(int a, int b, int c, int lar)
+{
+  printf("the largest of %d,%d and %d is %d \n",a,b,c,lar);
 }

@@ -3,9 +3,9 @@
 
 int main()
 {
-  int a,b,sum;
+  int a,b,sum=0;
   a=input();
-  b=input()
+  b=input();
   sum=add(a,b);
   output(a,b,sum);
   return 0;
@@ -17,11 +17,10 @@ int input()
   printf("enter a number\n");
   if(scanf("%d",&x)!=1)
   {
-    printf("error in user input system 
-    \n");
-    exit(0); 
+    printf("error");
+    exit(0);
   }
-  return(x);
+  return x;
 }
 
 int add(int a,int b)
@@ -35,6 +34,8 @@ void output(int a,int b,int sum)
 {
   printf("the sum of %d and %d is %d \n",a,b,sum);
 }
+
+
 
 
 

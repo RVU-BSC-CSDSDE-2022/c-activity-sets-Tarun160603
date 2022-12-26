@@ -1,21 +1,55 @@
 #include <stdio.h>
-int sum_func(int *x, int *y, int *sum);
+#include <stdlib>
+int input();
+void add(int a,int b,int *sum);
+void output(int a,int b,int sum);
 
-int main() 
+int main()
 {
-  int x, y,sum;
-  printf("Enter the first number");
-  scanf("%d", &x);
-  printf("Enter the second number");
-  scanf("%d" , &y);
-  sum_func(&x,&y,&sum);
-  printf("%d", sum);
+  int a,b,sum;
+  a=input();
+  b=input();
+  add(a,b,&sum)
+  output()
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int input();
+void add(int a, int b,int *sum);
+void output(int a, int b, int sum);
+
+int main()
+{
+  int a,b,sum;
+  a = input();
+  b = input();
+  add(a,b, &sum);
+  output(a,b,sum);
   return 0;
 }
-  
 
-sum_func(int *x, int *y, int *sum)
-
+int input()
 {
-  *sum=*x+*y;
+  int x;
+  printf("Enter a number\n");
+  if(scanf("%d", &x)!=1)
+  {
+    printf("Error in user input system can't continue\n");
+    exit(0);
+  }
+  return(x);
+}
+
+void add(int a, int b,int *sum)
+{
+  *sum = a+b;
+}
+
+void output(int a, int b, int sum)
+{
+  printf("The sum of %d and %d is %d\n",a,b,sum);
 }
